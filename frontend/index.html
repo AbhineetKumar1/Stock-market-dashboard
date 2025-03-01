@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <button onclick="toggleDarkMode()" class="dark-mode-btn">🌙 Toggle Dark Mode</button>
+    <div class="container">
+        <h2>📈 Stock Market Dashboard</h2>
+        
+        <div class="row">
+            <!-- Left Side: Company List -->
+            <div class="col left">
+                <h4>Companies</h4>
+                <input type="text" id="search-bar" placeholder="🔍 Search company..." onkeyup="filterCompanies()">
+                <ul id="company-list" class="list-group"></ul>
+            </div>
+
+            <!-- Right Side: Stock Chart -->
+            <div class="col right">
+                <h4>Stock Chart</h4>
+                <div class="chart-container">
+                    <canvas id="stockChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

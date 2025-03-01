@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .left,
+.dark-mode .right {
+    background: #1e1e1e;
+    color: white;
+    box-shadow: none;
+}
+
+.dark-mode-btn {
+    background: #222;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+}
+
+.dark-mode-btn:hover {
+    background: #444;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Grid Layout */
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Left Side: Company List */
+.left {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    overflow-y: auto;
+}
+
+/* Right Side: Stock Chart */
+.right {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar */
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+/* Company List */
+.list-group {
+    list-style: none;
+    padding: 0;
+}
+
+.list-group-item {
+    padding: 10px;
+    margin: 5px 0;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+}
+
+.list-group-item:hover {
+    background: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Chart */
+.chart-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.chart-container, .list-group-item, select, button {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+}
